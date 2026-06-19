@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import joblib
 
-model = joblib.load("best_model.pkl")
+model = joblib.load("xgboost_pipeline.pkl")
 
 def main():
     st.title("Credit Score Prediction")
