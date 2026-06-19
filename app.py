@@ -88,7 +88,12 @@ def main():
 
         st.subheader("Prediction Result")
 
-        st.success(f"Predicted Credit Score: {predicted_label}")
+        if predicted_label == "Good":
+            st.success(f"Predicted Credit Score: {predicted_label}")
+        elif predicted_label == "Standard":
+            st.warning(f"Predicted Credit Score: {predicted_label}")
+        else:
+            st.error(f"Predicted Credit Score: {predicted_label}")
 
         st.write(f"Confidence: {confidence:.2%}")
 
